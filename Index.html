@@ -1,0 +1,495 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Birthday Surprise 💗</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ========================= -->
+    <!-- PASSWORD SCREEN -->
+    <!-- ========================= -->
+
+    <section id="passwordScreen" class="surprise-page active">
+
+        <div class="page-content">
+
+            <h1>💗 A Secret Surprise 💗</h1>
+
+            <p>Enter the password to begin your birthday journey.</p>
+
+            <input
+                type="password"
+                id="passwordInput"
+                placeholder="Enter Password"
+            >
+
+            <button id="unlockButton">
+                Open Surprise 💗
+            </button>
+
+            <p id="passwordMessage"></p>
+
+        </div>
+
+    </section>
+
+
+    
+<!-- ========================= -->
+<!-- CUSTOM WELCOME PAGE -->
+<!-- ========================= -->
+
+<section id="welcomePage" class="surprise-page">
+
+    <div class="welcome-window">
+
+        <!-- Browser Window Header -->
+
+        <div class="window-header">
+
+            <div class="window-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+            </div>
+
+            <div class="window-title">
+                Happy Birthday to You! 💗
+            </div>
+
+            <div class="window-actions">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </div>
+
+
+        <!-- Browser Window Content -->
+
+        <div class="welcome-content">
+
+            <div class="welcome-top-decoration">
+                <span>•</span>
+                <div class="mini-gradient-line"></div>
+                <span>•</span>
+            </div>
+
+
+            <!-- Character Placeholder -->
+
+            <div class="welcome-character">
+
+                <div class="character-placeholder">
+                    🎀
+                </div>
+
+            </div>
+
+
+            <!-- Small Greeting -->
+
+            <p class="welcome-small-text">
+                Heyy Cutiepie!! 💗
+            </p>
+
+
+            <!-- Main Heading -->
+
+            <h1 class="welcome-main-heading">
+                I hope you will like it
+            </h1>
+
+
+            <!-- Short Message -->
+
+            <p class="welcome-description">
+                A little birthday surprise made especially for you. ✨
+            </p>
+
+
+            <div class="welcome-actions">
+
+    <button
+        class="welcome-primary-button"
+        onclick="showPage('flowerPage')">
+
+        Yay! Show Me! 💗
+
+    </button>
+
+
+    <button
+        class="welcome-secondary-button"
+        onclick="showPage('flowerPage')">
+
+        Let's Go ✨
+
+    </button>
+
+</div>
+
+            </div>
+
+
+            
+<!-- Decorative Elements --png<div class="welcome-decoration decoration-left">
+    🌸
+</div>
+
+<div class="welcome-decoration decoration-right">
+    🎈
+</div>
+
+
+<!-- Pastel Balloons -->
+
+<div class="pastel-balloon balloon-one">
+    <span></span>
+</div>
+
+<div class="pastel-balloon balloon-two">
+    <span></span>
+</div>
+
+<div class="pastel-balloon balloon-three">
+    <span></span>
+</div>
+
+
+<!-- Flower Decorations -->
+
+<div class="flower-decoration flower-one">
+    🌸
+</div>
+
+<div class="flower-decoration flower-two">
+    🌷
+</div>
+
+<div class="flower-decoration flower-three">
+    🌼
+</div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+    <!-- ========================= -->
+    <!-- SURPRISE 2: FLOWERS -->
+    <!-- ========================= -->
+
+    <section id="flowerPage" class="surprise-page">
+
+        <div class="page-content">
+
+            <h1>🌸 A Little Flower Surprise 🌸</h1>
+
+            <p>These flowers are blooming just for you.</p>
+
+            <div id="flowerContainer"></div>
+
+            <button class="next-button" data-next="cakePage">
+                Next Surprise 🎂
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- SURPRISE 3: CAKE -->
+    <!-- ========================= -->
+
+    <section id="cakePage" class="surprise-page">
+
+    <div class="birthday-cake-scene">
+
+        <!-- Balloons -->
+        <div class="birthday-balloon balloon-1">🎈</div>
+        <div class="birthday-balloon balloon-2">🎈</div>
+        <div class="birthday-balloon balloon-3">🎈</div>
+        <div class="birthday-balloon balloon-4">🎈</div>
+        <div class="birthday-balloon balloon-5">🎈</div>
+        <div class="birthday-balloon balloon-6">🎈</div>
+        <div class="birthday-balloon balloon-7">🎈</div>
+        <div class="birthday-balloon balloon-8">🎈</div>
+
+        <!-- Flowers -->
+        <div class="birthday-flower flower-1">🌸</div>
+        <div class="birthday-flower flower-2">🌷</div>
+        <div class="birthday-flower flower-3">🌼</div>
+        <div class="birthday-flower flower-4">🌺</div>
+        <div class="birthday-flower flower-5">🌸</div>
+
+        <!-- Cute Cats -->
+        <div class="birthday-cat cat-1">🐱</div>
+        <div class="birthday-cat cat-2">🐱</div>
+
+      <!-- Cake Banner -->
+
+<div class="cake-banner">
+
+    <div class="banner-rope"></div>
+
+    <div class="banner-flag">
+        Happy Birthday Tahamu 💗
+    </div>
+
+    <div class="banner-decoration">
+        ✨ 🌸 ✨
+    </div>
+
+</div>
+
+        <!-- Cake -->
+        <div class="cake-area">
+
+            <div class="candle">
+                <div class="candle-flame">🔥</div>
+                <div class="candle-stick">
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="cake-pieces">
+
+                <div class="cake-layer layer-bottom"></div>
+                <div class="cake-layer layer-middle"></div>
+                <div class="cake-layer layer-top"></div>
+
+                <div class="cake-cream cream-one"></div>
+                <div class="cake-cream cream-two"></div>
+
+                <div class="cake-sprinkles">
+                    🍓 ✨ 🍓
+                </div>
+
+            </div>
+
+            <div class="cake-plate"></div>
+
+        </div>
+
+        <h1 class="birthday-text">
+            Happy Birthday My Love! 💗
+        </h1>
+
+        <button
+            class="next-button cake-next-button"
+            data-next="giftPage"
+        >
+            Next Surprise 🎁
+        </button>
+
+    </div>
+
+</section>
+
+
+    <!-- ========================= -->
+    <!-- SURPRISE 4: GIFT BOX -->
+    <!-- ========================= -->
+
+    <section id="giftPage" class="surprise-page">
+
+    <div class="gift-content">
+
+        <div class="gift-sparkles">✨ 💗 ✨</div>
+
+        <h1>একটি ছোট্ট উপহার 🎁</h1>
+
+        <div class="gift-box">
+
+            <div class="gift-lid"></div>
+
+            <div class="gift-body"></div>
+
+            <div class="gift-ribbon-vertical"></div>
+
+            <div class="gift-ribbon-horizontal"></div>
+
+            <div class="gift-bow">🎀</div>
+
+        </div>
+
+        <p class="gift-message">
+            This gift is made with lots of love. 💗
+        </p>
+
+        <button
+            class="next-button"
+            data-next="catPage"
+        >
+            Open Gift 💝
+        </button>
+
+    </div>
+
+</section>
+
+
+    <!-- ========================= -->
+    <!-- SURPRISE 5: CAT WORLD -->
+    <!-- ========================= -->
+
+    <section id="catPage" class="surprise-page">
+
+    <div class="cat-game-content">
+
+        <h1>Touch My Cat 🐱💗</h1>
+
+        <p id="catReaction">
+            Touch me gently! 🥺
+        </p>
+
+        <div class="cat-game-area">
+
+            <img
+    src="assets/cat/walk1.png"
+    id="gameCat"
+    class="game-cat"
+    alt="Cute Cat"
+>
+
+            <div id="heartEffects"></div>
+
+        </div>
+
+        <button id="touchCatBtn" class="game-button">
+            Touch Cat 👆
+        </button> 
+      
+
+        <button
+            class="next-button"
+            data-next="transitionPage"
+        > 
+          
+            Next Play ➡️
+        </button>
+
+    </div>
+
+</section>
+
+
+    <!-- ========================= -->
+    <!-- CAT TO LETTER TRANSITION -->
+    <!-- ========================= -->
+
+    <section id="transitionPage" class="surprise-page">
+
+        <div class="page-content">
+
+            <h1>💌 One Last Surprise 💌</h1>
+
+            <p>There is a special message waiting for you.</p>
+
+            <button class="next-button" data-next="letterPage">
+                Open Final Surprise 💌
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- FINAL LETTER -->
+    <!-- ========================= -->
+
+    <!-- ============================= -->
+<!-- FINAL LETTER PAGE -->
+<!-- ============================= -->
+
+<section id="letterPage" class="surprise-page">
+
+    <div class="page-content">
+
+        <!-- Envelope Screen -->
+        <div id="envelopeScreen" class="letter-content">
+
+            <div class="letter-sparkles">
+                ✨ 💗 ✨
+            </div>
+
+            <h1>💌 A Special Letter For You 💌</h1>
+
+            <p>
+                Something special is waiting for you...
+            </p>
+
+            <div id="envelope" class="envelope">
+                💌
+            </div>
+
+            <button id="openLetterBtn" class="game-button">
+                Open My Letter 💌
+            </button>
+
+        </div>
+
+
+        <!-- Letter Screen -->
+        <div id="letterScreen" class="letter-content" style="display: none;">
+
+            <div class="letter-paper">
+
+                <div class="letter-decoration">
+                    🌸 💗 🌸
+                </div>
+
+                <h1>
+                    💌 A Letter For You 💌
+                </h1>
+
+                <div id="letterContainer" class="typed-letter">
+                </div>
+
+                <p id="finalMessage">
+                    Happy Birthday!  💗
+                </p>
+
+                <div class="letter-signature">
+                    Hope your Happy 
+                </div>
+
+                <div class="letter-decoration">
+                    💗 ✨ 💗
+                </div>
+
+            </div>
+
+            <button id="replayButton" class="game-button">
+                Replay Surprise 🔄
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+    <!-- JAVASCRIPT -->
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html> 
