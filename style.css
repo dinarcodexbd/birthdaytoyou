@@ -1,0 +1,2967 @@
+
+/* ========================= */
+/* BASIC RESET */
+/* ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ========================= */
+/* BODY */
+/* ========================= */
+
+body {
+    min-height: 100vh;
+    min-height: 100svh;
+
+    font-family: Arial, sans-serif;
+
+    background: #fff0f6;
+    color: #70445a;
+
+    overflow: hidden;
+}
+
+
+/* ========================= */
+/* SURPRISE PAGE */
+/* ========================= */
+
+.surprise-page {
+    display: none;
+
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+
+    padding: 24px;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    opacity: 0;
+
+    transition:
+        opacity 0.6s ease,
+        visibility 0.6s ease;
+
+    visibility: hidden;
+}
+
+
+/* ACTIVE PAGE */
+
+.surprise-page.active {
+    display: flex;
+
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* ========================= */
+/* PAGE CONTENT */
+/* ========================= */
+
+.page-content {
+    width: 100%;
+    max-width: 440px;
+
+    padding: 30px 22px;
+
+    background: rgba(255, 255, 255, 0.78);
+
+    border: 1px solid rgba(255, 182, 203, 0.5);
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 10px 35px rgba(215, 126, 159, 0.15);
+
+    backdrop-filter: blur(8px);
+
+    animation: contentAppear 0.7s ease;
+}
+
+
+/* ========================= */
+/* HEADINGS */
+/* ========================= */
+
+h1 {
+    margin-bottom: 18px;
+
+    font-size: clamp(24px, 7vw, 34px);
+
+    line-height: 1.3;
+
+    color: #c65f88;
+}
+
+
+/* ========================= */
+/* PARAGRAPHS */
+/* ========================= */
+
+p {
+    margin-bottom: 20px;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+/* ========================= */
+/* INPUT */
+/* ========================= */
+
+input {
+    width: 100%;
+
+    padding: 14px 16px;
+
+    margin-bottom: 14px;
+
+    border: 2px solid #f3b4cc;
+
+    border-radius: 14px;
+
+    outline: none;
+
+    background: #fffafd;
+
+    color: #70445a;
+
+    font-size: 16px;
+
+    text-align: center;
+}
+
+input:focus {
+    border-color: #d979a0;
+
+    box-shadow:
+        0 0 0 4px rgba(217, 121, 160, 0.12);
+}
+
+
+/* ========================= */
+/* BUTTONS */
+/* ========================= */
+
+button {
+    width: 100%;
+
+    padding: 14px 18px;
+
+    margin-top: 8px;
+
+    border: none;
+
+    border-radius: 999px;
+
+    background: #e99ab9;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+button:hover {
+    background: #d982a5;
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+button:focus-visible {
+    outline: 3px solid #c65f88;
+    outline-offset: 3px;
+}
+
+
+/* ========================= */
+/* PASSWORD MESSAGE */
+/* ========================= */
+
+#passwordMessage {
+    margin-top: 14px;
+
+    color: #c65f88;
+
+    font-size: 14px;
+}
+
+
+/* ========================= */
+/* EMPTY CONTAINERS */
+/* ========================= */
+
+#flowerContainer,
+#cakeContainer,
+#giftContainer,
+#catContainer,
+#letterContainer {
+    min-height: 40px;
+
+    margin-bottom: 12px;
+}
+
+
+/* ========================= */
+/* ANIMATION */
+/* ========================= */
+
+@keyframes contentAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ========================= */
+/* MOBILE RESPONSIVE */
+/* ========================= */
+
+@media (max-width: 480px) {
+
+    .surprise-page {
+        padding: 16px;
+    }
+
+    .page-content {
+        padding: 26px 18px;
+
+        border-radius: 24px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+}
+
+/* ================================= */
+/* CUSTOM WELCOME WINDOW DESIGN */
+/* ================================= */
+
+
+/* Welcome page background */
+
+#welcomePage {
+    position: relative;
+
+    padding: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fce4ec,
+            #fff1f6,
+            #f9e4ec,
+            #fff8f5
+        );
+
+    background-size: 300% 300%;
+
+    animation: welcomeBackground 18s ease infinite;
+}
+
+
+/* Browser-style window */
+
+.welcome-window {
+    position: relative;
+
+    width: 100%;
+    max-width: 620px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(255, 255, 255, 0.9);
+
+    border-radius: 22px;
+
+    background: rgba(255, 255, 255, 0.82);
+
+    box-shadow:
+        0 20px 55px rgba(193, 117, 148, 0.18),
+        0 0 30px rgba(255, 204, 221, 0.25);
+
+    backdrop-filter: blur(12px);
+
+    animation: welcomeWindowAppear 1s ease;
+}
+
+
+/* Browser header */
+
+.window-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 48px;
+
+    padding: 10px 16px;
+
+    border-bottom: 1px solid rgba(225, 182, 198, 0.35);
+
+    background: rgba(255, 255, 255, 0.6);
+}
+
+
+/* Window dots */
+
+.window-dots {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    min-width: 65px;
+}
+
+.dot {
+    display: block;
+
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+}
+
+.dot.red {
+    background: #ed817c;
+}
+
+.dot.yellow {
+    background: #f1c46f;
+}
+
+.dot.green {
+    background: #8acb8a;
+}
+
+
+/* Window title */
+
+.window-title {
+    flex: 1;
+
+    padding: 6px 8px;
+
+    color: #c28b9f;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 0.5px;
+
+    text-align: center;
+}
+
+
+/* Window action dots */
+
+.window-actions {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 5px;
+
+    min-width: 65px;
+}
+
+.window-actions span {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #edc4d2;
+}
+
+
+/* Welcome content */
+
+.welcome-content {
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 430px;
+
+    padding: 35px 22px 40px;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(255, 235, 243, 0.8),
+            transparent 55%
+        );
+}
+
+
+/* Top decoration */
+
+.welcome-top-decoration {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    margin-bottom: 18px;
+
+    color: #e3a2b9;
+
+    font-size: 16px;
+}
+
+.mini-gradient-line {
+    width: 44px;
+    height: 5px;
+
+    border-radius: 999px;
+
+    background: linear-gradient(
+        90deg,
+        #f3b8cd,
+        #e8b0c2,
+        #f2d5a9
+    );
+}
+
+
+/* Character area */
+
+.welcome-character {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 108px;
+    height: 96px;
+
+    margin-bottom: 18px;
+
+    border-radius: 18px;
+
+    background: rgba(255, 255, 255, 0.7);
+
+    box-shadow:
+        0 8px 20px rgba(216, 143, 171, 0.12);
+
+    animation: characterFloat 4s ease-in-out infinite;
+}
+
+
+/* Temporary character placeholder */
+
+.character-placeholder {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 72px;
+    height: 72px;
+
+    border-radius: 18px;
+
+    background: #fff4f8;
+
+    font-size: 42px;
+}
+
+
+/* Small greeting */
+
+.welcome-small-text {
+    margin-bottom: 12px;
+
+    color: #b77993;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    letter-spacing: 0.4px;
+}
+
+
+/* Main heading */
+
+.welcome-main-heading {
+    max-width: 470px;
+
+    margin-bottom: 12px;
+
+    color: #292029;
+
+    font-size: clamp(26px, 6vw, 40px);
+
+    font-weight: 700;
+
+    line-height: 1.25;
+
+    text-shadow: none;
+}
+
+
+/* Description */
+
+.welcome-description {
+    max-width: 360px;
+
+    margin-bottom: 24px;
+
+    color: #947080;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* Action buttons */
+
+.welcome-actions {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    width: 100%;
+}
+
+
+/* Both welcome buttons */
+
+.welcome-actions button {
+    width: auto;
+
+    min-width: 125px;
+
+    margin-top: 0;
+
+    padding: 12px 20px;
+
+    font-size: 13px;
+}
+
+
+/* Primary button */
+
+.welcome-primary-button {
+    background: linear-gradient(
+        135deg,
+        #ed8eae,
+        #d96f98
+    );
+
+    box-shadow:
+        0 7px 18px rgba(218, 116, 153, 0.25);
+}
+
+.welcome-primary-button:hover {
+    background: linear-gradient(
+        135deg,
+        #df7fa1,
+        #c9638b
+    );
+}
+
+
+/* Secondary button */
+
+.welcome-secondary-button {
+    border: 1px solid #efd0dc;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    color: #ad718c;
+
+    box-shadow:
+        0 5px 14px rgba(211, 157, 178, 0.1);
+}
+
+.welcome-secondary-button:hover {
+    background: #fff1f6;
+
+    color: #c65f88;
+}
+
+
+/* Decorations */
+
+.welcome-decoration {
+    position: absolute;
+
+    font-size: 38px;
+
+    pointer-events: none;
+
+    user-select: none;
+
+    opacity: 0.8;
+
+    animation: decorationFloat 5s ease-in-out infinite;
+}
+
+.decoration-left {
+    bottom: 22px;
+    left: 22px;
+}
+
+.decoration-right {
+    top: 25px;
+    right: 25px;
+
+    font-size: 34px;
+
+    animation-delay: 1.5s;
+}
+
+
+/* Background animation */
+
+@keyframes welcomeBackground {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
+
+
+/* Window entrance */
+
+@keyframes welcomeWindowAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+/* Character floating */
+
+@keyframes characterFloat {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+
+/* Decoration floating */
+
+@keyframes decorationFloat {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(5deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+}
+
+
+/* Mobile design */
+
+@media (max-width: 480px) {
+
+    #welcomePage {
+        padding: 12px;
+    }
+
+    .welcome-window {
+        border-radius: 18px;
+    }
+
+    .window-header {
+        min-height: 42px;
+
+        padding: 8px 11px;
+    }
+
+    .window-title {
+        font-size: 8px;
+    }
+
+    .welcome-content {
+        min-height: 420px;
+
+        padding: 28px 16px 32px;
+    }
+
+    .welcome-character {
+        width: 94px;
+        height: 86px;
+    }
+
+    .character-placeholder {
+        width: 62px;
+        height: 62px;
+
+        font-size: 34px;
+    }
+
+    .welcome-main-heading {
+        font-size: 28px;
+    }
+
+    .welcome-actions {
+        gap: 9px;
+    }
+
+    .welcome-actions button {
+        min-width: 115px;
+
+        padding: 11px 14px;
+
+        font-size: 12px;
+    }
+
+    .decoration-left {
+        bottom: 15px;
+        left: 12px;
+    }
+
+    .decoration-right {
+        top: 18px;
+        right: 14px;
+    }
+
+}
+
+/* ================================= */
+/* PASTEL BALLOONS */
+/* ================================= */
+
+.pastel-balloon {
+    position: absolute;
+
+    width: 48px;
+    height: 62px;
+
+    border-radius: 50% 50% 45% 45%;
+
+    opacity: 0.9;
+
+    z-index: 1;
+
+    animation: balloonFloat 5s ease-in-out infinite;
+}
+
+
+/* Balloon knot */
+
+.pastel-balloon::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: -5px;
+    left: 50%;
+
+    width: 9px;
+    height: 9px;
+
+    background: inherit;
+
+    transform: translateX(-50%) rotate(45deg);
+}
+
+
+/* Balloon string */
+
+.pastel-balloon span {
+    position: absolute;
+
+    top: 100%;
+    left: 50%;
+
+    width: 1px;
+    height: 48px;
+
+    background: #d8a4b7;
+
+    transform: translateX(-50%);
+}
+
+
+/* Balloon one */
+
+.balloon-one {
+    top: 85px;
+    left: 7%;
+
+    background: #f4b6cd;
+
+    animation-delay: 0s;
+}
+
+
+/* Balloon two */
+
+.balloon-two {
+    top: 120px;
+    right: 8%;
+
+    background: #f8d9a7;
+
+    animation-delay: 1.2s;
+}
+
+
+/* Balloon three */
+
+.balloon-three {
+    bottom: 70px;
+    right: 12%;
+
+    background: #cdb9e8;
+
+    animation-delay: 2.2s;
+}
+
+
+/* ================================= */
+/* FLOWER DECORATIONS */
+/* ================================= */
+
+.flower-decoration {
+    position: absolute;
+
+    z-index: 2;
+
+    font-size: 32px;
+
+    user-select: none;
+
+    pointer-events: none;
+
+    filter: drop-shadow(
+        0 5px 8px rgba(200, 130, 160, 0.12)
+    );
+
+    animation: flowerFloat 5s ease-in-out infinite;
+}
+
+
+/* Flower one */
+
+.flower-one {
+    left: 9%;
+    bottom: 38px;
+
+    animation-delay: 0.5s;
+}
+
+
+/* Flower two */
+
+.flower-two {
+    top: 70px;
+    right: 22%;
+
+    font-size: 28px;
+
+    animation-delay: 1.5s;
+}
+
+
+/* Flower three */
+
+.flower-three {
+    right: 7%;
+    bottom: 35px;
+
+    font-size: 30px;
+
+    animation-delay: 2.5s;
+}
+
+
+/* ================================= */
+/* BALLOON ANIMATION */
+/* ================================= */
+
+@keyframes balloonFloat {
+
+    0% {
+        transform: translateY(0) rotate(-3deg);
+    }
+
+    50% {
+        transform: translateY(-14px) rotate(3deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(-3deg);
+    }
+
+}
+
+
+/* ================================= */
+/* FLOWER ANIMATION */
+/* ================================= */
+
+@keyframes flowerFloat {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-8px) rotate(5deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+}
+
+
+/* ================================= */
+/* MOBILE ADJUSTMENT */
+/* ================================= */
+
+@media (max-width: 480px) {
+
+    .pastel-balloon {
+        width: 34px;
+        height: 45px;
+    }
+
+    .pastel-balloon span {
+        height: 32px;
+    }
+
+    .balloon-one {
+        top: 75px;
+        left: 3%;
+    }
+
+    .balloon-two {
+        top: 95px;
+        right: 3%;
+    }
+
+    .balloon-three {
+        bottom: 55px;
+        right: 5%;
+    }
+
+    .flower-decoration {
+        font-size: 25px;
+    }
+
+    .flower-two {
+        font-size: 22px;
+    }
+
+    .flower-three {
+        font-size: 24px;
+    }
+
+}
+/* FLOWER PAGE */
+
+#flowerPage {
+    background: linear-gradient(
+        135deg,
+        #fff0f6,
+        #fce4ec,
+        #f8e8ff
+    );
+}
+
+.flower-content {
+    text-align: center;
+}
+
+.flower-emoji {
+    font-size: 75px;
+    animation: flowerFloat 3s ease-in-out infinite;
+}
+
+.flower-content h1 {
+    color: #b85c86;
+    margin: 20px 0;
+}
+
+.flower-content p {
+    color: #916477;
+    font-size: 17px;
+    max-width: 350px;
+    line-height: 1.7;
+}
+
+.flower-bunch {
+    font-size: 42px;
+    margin: 30px 0;
+    animation: flowerFloat 4s ease-in-out infinite;
+}
+
+@media (max-width: 480px) {
+    .flower-emoji {
+        font-size: 60px;
+    }
+
+    .flower-bunch {
+        font-size: 32px;
+    }
+}
+/* ============================= */
+/* BIRTHDAY CAKE ANIMATION */
+/* ============================= */
+
+#cakePage {
+    background: #f4aebe;
+    overflow: hidden;
+}
+
+.birthday-cake-scene {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.cake-pieces {
+    width: 180px;
+    height: 110px;
+    position: relative;
+    margin-top: 50px;
+}
+
+.cake-layer {
+    position: absolute;
+    left: 0;
+
+    width: 180px;
+    height: 30px;
+
+    background: #997267;
+    border-radius: 5px;
+
+    opacity: 0;
+    animation: cakeFall 0.8s ease-out forwards;
+}
+
+.layer-bottom {
+    bottom: 0;
+    animation-delay: 0.5s;
+}
+
+.layer-middle {
+    bottom: 30px;
+    animation-delay: 1s;
+}
+
+.layer-top {
+    bottom: 60px;
+    animation-delay: 1.5s;
+}
+
+.cake-cream {
+    position: absolute;
+
+    width: 180px;
+    height: 13px;
+
+    background: #fff8ed;
+    border-radius: 10px;
+
+    opacity: 0;
+    animation: creamFall 0.6s ease-out forwards;
+}
+
+.cream-one {
+    bottom: 55px;
+    animation-delay: 2s;
+}
+
+.cream-two {
+    bottom: 85px;
+    animation-delay: 2.4s;
+}
+
+.cake-plate {
+    width: 210px;
+    height: 5px;
+
+    background: #fff8ed;
+    border-radius: 50%;
+
+    opacity: 0;
+    animation: plateAppear 0.5s ease forwards;
+    animation-delay: 0.3s;
+}
+
+.candle {
+    position: relative;
+
+    width: 20px;
+    height: 75px;
+
+    margin-top: -100px;
+    z-index: 5;
+}
+
+.candle-stick {
+    width: 13px;
+    height: 55px;
+
+    margin: auto;
+
+    background: repeating-linear-gradient(
+        0deg,
+        #fff8ed 0px,
+        #fff8ed 8px,
+        #e9a2b5 9px,
+        #e9a2b5 12px
+    );
+
+    border-radius: 4px;
+
+    opacity: 0;
+    animation: candleAppear 0.5s ease forwards;
+    animation-delay: 3s;
+}
+
+.candle-flame {
+    position: absolute;
+
+    top: -35px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-size: 27px;
+
+    opacity: 0;
+    animation:
+        flameAppear 0.5s ease forwards,
+        flameMove 0.8s ease-in-out infinite;
+
+    animation-delay: 3.5s, 4s;
+}
+
+.birthday-text {
+    margin-top: 35px;
+
+    color: #b6386b;
+
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+
+    opacity: 0;
+    transform: translateY(20px);
+
+    animation: textAppear 1s ease forwards;
+    animation-delay: 4s;
+}
+
+.cake-next-button {
+    margin-top: 25px;
+
+    opacity: 0;
+    animation: textAppear 1s ease forwards;
+    animation-delay: 4.8s;
+}
+
+/* ============================= */
+/* ANIMATIONS */
+/* ============================= */
+
+@keyframes cakeFall {
+    0% {
+        opacity: 0;
+        transform: translateY(-250px) rotate(-10deg);
+    }
+
+    70% {
+        opacity: 1;
+        transform: translateY(15px) rotate(3deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) rotate(0);
+    }
+}
+
+@keyframes creamFall {
+    0% {
+        opacity: 0;
+        transform: translateY(-180px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes plateAppear {
+    from {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+@keyframes candleAppear {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes flameAppear {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+    }
+}
+
+@keyframes flameMove {
+    0%,
+    100% {
+        filter: brightness(1);
+    }
+
+    50% {
+        filter: brightness(1.5);
+    }
+}
+
+@keyframes textAppear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 480px) {
+
+    .cake-pieces {
+        transform: scale(0.85);
+    }
+
+    .birthday-text {
+        font-size: 23px;
+        padding: 0 20px;
+    }
+
+}
+
+/* ================================= */
+/* BIRTHDAY DECORATION UPDATE */
+/* ================================= */
+
+#cakePage {
+    background: #fff0f5;
+    overflow: hidden;
+}
+
+.birthday-cake-scene {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.cake-area {
+    position: relative;
+    width: 230px;
+    height: 230px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* CAKE */
+
+.cake-pieces {
+    width: 180px;
+    height: 110px;
+    position: relative;
+    z-index: 2;
+}
+
+.cake-layer {
+    position: absolute;
+    left: 0;
+
+    width: 180px;
+    height: 30px;
+
+    background: #bd806d;
+    border: 2px solid #a96558;
+    border-radius: 8px;
+
+    animation: cakeFall 0.8s ease-out both;
+}
+
+.layer-bottom {
+    bottom: 0;
+    animation-delay: 0.3s;
+}
+
+.layer-middle {
+    bottom: 30px;
+    animation-delay: 0.8s;
+}
+
+.layer-top {
+    bottom: 60px;
+    animation-delay: 1.3s;
+}
+
+.cake-cream {
+    position: absolute;
+    left: 0;
+
+    width: 180px;
+    height: 12px;
+
+    background: #ffffff;
+    border-radius: 10px;
+
+    animation: creamFall 0.7s ease-out both;
+}
+
+.cream-one {
+    bottom: 55px;
+    animation-delay: 1.8s;
+}
+
+.cream-two {
+    bottom: 85px;
+    animation-delay: 2.2s;
+}
+
+.cake-sprinkles {
+    position: absolute;
+    top: -5px;
+    left: 30px;
+
+    font-size: 18px;
+    z-index: 5;
+
+    animation: sprinkleAppear 1s ease both;
+    animation-delay: 2.5s;
+}
+
+.cake-plate {
+    width: 215px;
+    height: 12px;
+
+    background: #ffffff;
+    border-radius: 50%;
+
+    z-index: 3;
+
+    animation: plateAppear 0.5s ease both;
+}
+
+/* CANDLE ABOVE CAKE */
+
+.candle {
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    width: 30px;
+    height: 90px;
+
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.candle-stick {
+    position: absolute;
+
+    bottom: 0;
+    left: 7px;
+
+    width: 16px;
+    height: 65px;
+
+    background: repeating-linear-gradient(
+        45deg,
+        #f6a8c4 0px,
+        #f6a8c4 8px,
+        #ffffff 8px,
+        #ffffff 14px
+    );
+
+    border: 2px solid #d986a7;
+    border-radius: 5px;
+
+    animation: candleAppear 0.7s ease both;
+    animation-delay: 3s;
+}
+
+.candle-stick span {
+    position: absolute;
+
+    top: -5px;
+    left: 50%;
+
+    width: 5px;
+    height: 8px;
+
+    background: #5b4038;
+    border-radius: 50%;
+    transform: translateX(-50%);
+}
+
+.candle-flame {
+    position: absolute;
+
+    top: -42px;
+    left: 50%;
+
+    font-size: 30px;
+
+    transform: translateX(-50%);
+    transform-origin: bottom center;
+
+    animation:
+        flameAppear 0.6s ease both,
+        flameMove 0.8s ease-in-out infinite;
+
+    animation-delay: 3.5s, 4.1s;
+}
+
+/* BALLOONS */
+
+.birthday-balloon {
+    position: absolute;
+    z-index: 1;
+
+    font-size: 42px;
+
+    animation: balloonMove 5s ease-in-out infinite;
+}
+
+.balloon-1 {
+    top: 8%;
+    left: 5%;
+}
+
+.balloon-2 {
+    top: 15%;
+    left: 20%;
+    animation-delay: 1s;
+}
+
+.balloon-3 {
+    top: 8%;
+    right: 5%;
+    animation-delay: 1.5s;
+}
+
+.balloon-4 {
+    top: 25%;
+    right: 18%;
+    animation-delay: 2s;
+}
+
+.balloon-5 {
+    bottom: 20%;
+    left: 4%;
+    animation-delay: 0.5s;
+}
+
+.balloon-6 {
+    bottom: 12%;
+    right: 5%;
+    animation-delay: 2.5s;
+}
+
+.balloon-7 {
+    top: 40%;
+    left: 2%;
+    animation-delay: 3s;
+}
+
+.balloon-8 {
+    top: 42%;
+    right: 2%;
+    animation-delay: 1.8s;
+}
+
+/* FLOWERS */
+
+.birthday-flower {
+    position: absolute;
+    z-index: 4;
+
+    font-size: 32px;
+
+    animation: flowerRotate 4s linear infinite;
+}
+
+.flower-1 {
+    top: 12%;
+    left: 8%;
+}
+
+.flower-2 {
+    top: 20%;
+    right: 8%;
+    animation-delay: 1s;
+}
+
+.flower-3 {
+    bottom: 18%;
+    left: 12%;
+    animation-delay: 2s;
+}
+
+.flower-4 {
+    bottom: 15%;
+    right: 12%;
+    animation-delay: 0.5s;
+}
+
+.flower-5 {
+    top: 35%;
+    right: 5%;
+    animation-delay: 1.5s;
+}
+
+/* CATS */
+
+.birthday-cat {
+    position: absolute;
+    z-index: 6;
+
+    font-size: 48px;
+
+    animation: catBounce 3s ease-in-out infinite;
+}
+
+.cat-1 {
+    bottom: 12%;
+    left: 5%;
+}
+
+.cat-2 {
+    bottom: 12%;
+    right: 5%;
+    animation-delay: 1.5s;
+}
+
+/* TEXT */
+
+.birthday-text {
+    color: #b6386b;
+    font-size: 28px;
+    text-align: center;
+
+    padding: 0 15px;
+    margin-top: 25px;
+
+    animation: textAppear 1s ease both;
+    animation-delay: 4s;
+}
+
+.cake-next-button {
+    margin-top: 25px;
+
+    opacity: 1 !important;
+    animation: textAppear 1s ease both;
+    animation-delay: 4.5s;
+}
+
+/* ANIMATIONS */
+
+@keyframes cakeFall {
+    from {
+        opacity: 0;
+        transform: translateY(-250px) rotate(-8deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) rotate(0);
+    }
+}
+
+@keyframes creamFall {
+    from {
+        opacity: 0;
+        transform: translateY(-150px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes plateAppear {
+    from {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+@keyframes candleAppear {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes flameAppear {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+    }
+}
+
+@keyframes flameMove {
+    0%,
+    100% {
+        transform: translateX(-50%) rotate(-5deg) scale(1);
+    }
+
+    50% {
+        transform: translateX(-50%) rotate(5deg) scale(1.15);
+    }
+}
+
+@keyframes balloonMove {
+    0%,
+    100% {
+        transform: translateY(0) rotate(-5deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(5deg);
+    }
+}
+
+@keyframes flowerRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(12deg) scale(1.1);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes catBounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes sprinkleAppear {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes textAppear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 480px) {
+
+    .birthday-balloon {
+        font-size: 30px;
+    }
+
+    .birthday-flower {
+        font-size: 25px;
+    }
+
+    .birthday-cat {
+        font-size: 35px;
+    }
+
+    .birthday-text {
+        font-size: 23px;
+    }
+
+}    
+/* ================================= */
+/* CAKE BANNER */
+/* ================================= */
+
+.cake-banner {
+    position: absolute;
+
+    bottom: 215px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 245px;
+
+    text-align: center;
+    z-index: 12;
+}
+
+.banner-rope {
+    width: 210px;
+    height: 3px;
+
+    margin: auto;
+
+    background: #d78ca9;
+    border-radius: 10px;
+}
+
+.banner-flag {
+    margin: 0 auto;
+
+    padding: 12px 10px;
+
+    width: 235px;
+
+    background: #f3a5c1;
+    border: 2px solid #d982a6;
+
+    color: #ffffff;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    border-radius: 8px;
+
+    box-shadow: 0 5px 12px rgba(190, 100, 140, 0.15);
+
+    animation: bannerSwing 3s ease-in-out infinite;
+}
+
+.banner-decoration {
+    margin-top: 5px;
+
+    font-size: 18px;
+
+    animation: bannerSparkle 2s ease-in-out infinite;
+}
+
+/* ================================= */
+/* CANDLE POSITION FIX */
+/* ================================= */
+
+.candle {
+    position: absolute;
+
+    top: auto;
+    bottom: 95px;
+    left: 50%;
+
+    width: 30px;
+    height: 90px;
+
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.candle-stick {
+    position: absolute;
+
+    bottom: 0;
+    left: 7px;
+
+    width: 16px;
+    height: 65px;
+
+    background: repeating-linear-gradient(
+        45deg,
+        #f6a8c4 0px,
+        #f6a8c4 8px,
+        #ffffff 8px,
+        #ffffff 14px
+    );
+
+    border: 2px solid #d986a7;
+    border-radius: 5px;
+}
+
+.candle-flame {
+    top: -40px;
+}
+
+/* ================================= */
+/* BIGGER BALLOONS */
+/* ================================= */
+
+.birthday-balloon {
+    font-size: 58px;
+
+    animation: balloonMove 5s ease-in-out infinite;
+}
+
+/* ================================= */
+/* PINK CUTE CATS */
+/* ================================= */
+
+.birthday-cat {
+    font-size: 52px;
+
+    filter:
+        hue-rotate(300deg)
+        saturate(1.4)
+        drop-shadow(0 4px 5px rgba(210, 100, 160, 0.2));
+
+    animation: catBounce 3s ease-in-out infinite;
+}
+
+/* ================================= */
+/* BANNER ANIMATION */
+/* ================================= */
+
+@keyframes bannerSwing {
+    0%,
+    100% {
+        transform: rotate(-2deg);
+    }
+
+    50% {
+        transform: rotate(2deg);
+    }
+}
+
+@keyframes bannerSparkle {
+    0%,
+    100% {
+        opacity: 0.7;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.15);
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+
+    .cake-banner {
+        bottom: 215px;
+        width: 220px;
+    }
+
+    .banner-flag {
+        width: 215px;
+        font-size: 14px;
+    }
+
+    .birthday-balloon {
+        font-size: 48px;
+    }
+
+    .birthday-cat {
+        font-size: 44px;
+    }
+
+} 
+/* ============================= */
+/* GIFT PAGE */
+/* ============================= */
+
+#giftPage {
+    background: linear-gradient(
+        135deg,
+        #fff0f6,
+        #fce0eb,
+        #f8e8ff
+    );
+}
+
+.gift-content {
+    text-align: center;
+}
+
+.gift-content h1 {
+    color: #b84f80;
+    margin-bottom: 40px;
+}
+
+.gift-box {
+    position: relative;
+
+    width: 180px;
+    height: 150px;
+
+    margin: 20px auto 35px;
+
+    animation: giftBounce 3s ease-in-out infinite;
+}
+
+.gift-body {
+    position: absolute;
+
+    bottom: 0;
+    left: 10px;
+
+    width: 160px;
+    height: 105px;
+
+    background: #efa1bd;
+    border: 3px solid #d77f9f;
+    border-radius: 8px;
+}
+
+.gift-lid {
+    position: absolute;
+
+    top: 25px;
+    left: 0;
+
+    width: 180px;
+    height: 35px;
+
+    background: #f6b5ce;
+    border: 3px solid #d77f9f;
+    border-radius: 8px;
+
+    z-index: 3;
+
+    animation: lidMove 2s ease-in-out infinite;
+}
+
+.gift-ribbon-vertical {
+    position: absolute;
+
+    bottom: 0;
+    left: 78px;
+
+    width: 25px;
+    height: 125px;
+
+    background: #fff0a8;
+    z-index: 4;
+}
+
+.gift-ribbon-horizontal {
+    position: absolute;
+
+    top: 65px;
+    left: 10px;
+
+    width: 160px;
+    height: 22px;
+
+    background: #fff0a8;
+    z-index: 5;
+}
+
+.gift-bow {
+    position: absolute;
+
+    top: -10px;
+    left: 50%;
+
+    font-size: 48px;
+
+    transform: translateX(-50%);
+    z-index: 6;
+
+    animation: bowMove 2s ease-in-out infinite;
+}
+
+.gift-message {
+    color: #916477;
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+.gift-sparkles {
+    font-size: 28px;
+    animation: sparkleMove 2s ease-in-out infinite;
+}
+
+/* ANIMATIONS */
+
+@keyframes giftBounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes lidMove {
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(-3deg) translateY(-5px);
+    }
+}
+
+@keyframes bowMove {
+    0%,
+    100% {
+        transform: translateX(-50%) rotate(-5deg);
+    }
+
+    50% {
+        transform: translateX(-50%) rotate(5deg);
+    }
+}
+
+@keyframes sparkleMove {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+}  
+/* ============================= */
+/* MOVING CAT GAME */
+/* ============================= */
+
+/* ============================= */
+/* COZY CAT ROOM BACKGROUND */
+/* ============================= */
+
+#catPage {
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255, 190, 215, 0.35),
+            rgba(255, 225, 235, 0.8)
+        ),
+        linear-gradient(
+            180deg,
+            #f5b6ca 0%,
+            #f9d5df 48%,
+            #eeb2c5 49%,
+            #d995ae 100%
+        );
+
+    overflow: hidden;
+}
+
+.cat-game-area {
+    position: relative;
+
+    width: 100%;
+    height: 380px;
+
+    margin: 15px auto;
+
+    overflow: hidden;
+
+    border: 3px solid rgba(255, 255, 255, 0.65);
+    border-radius: 28px;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(255, 255, 255, 0.5) 0 35px,
+            transparent 36px
+        ),
+        linear-gradient(
+            180deg,
+            #f8c7d8 0%,
+            #f6dce5 63%,
+            #e5a9bc 64%,
+            #d68da8 100%
+        );
+
+    box-shadow:
+        0 10px 30px rgba(180, 90, 130, 0.18);
+}
+
+/* Decorative room elements */
+
+.cat-game-area::before {
+    content: "🌷   🪴                    🛋️";
+
+    position: absolute;
+
+    top: 18px;
+    left: 0;
+
+    width: 100%;
+
+    font-size: 32px;
+    letter-spacing: 5px;
+
+    opacity: 0.75;
+}
+
+.cat-game-area::after {
+    content: "🧶       💗       🌸";
+
+    position: absolute;
+
+    bottom: 18px;
+    left: 0;
+
+    width: 100%;
+
+    font-size: 26px;
+    text-align: center;
+
+    opacity: 0.85;
+}
+
+.cat-game-content {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.cat-game-content h1 {
+    color: #b84f80;
+}
+
+#catReaction {
+    color: #916477;
+    font-size: 17px;
+    min-height: 25px;
+}
+
+
+
+.game-cat {
+    position: absolute;
+
+    width: 190px;
+    height: 190px;
+
+    object-fit: cover;
+    border-radius: 50%;
+
+    left: -200px;
+    bottom: 55px;
+
+    cursor: pointer;
+    user-select: none;
+
+    animation: catWalk 12s linear infinite;
+
+    filter: drop-shadow(
+        0 8px 10px rgba(180, 100, 150, 0.2)
+    );
+}
+
+.game-cat.paused {
+    animation-play-state: paused;
+}
+
+.game-cat.happy {
+    animation:
+        catHappy 0.8s ease,
+        catWalk 12s linear infinite;
+}
+
+.game-button {
+    display: block;
+
+    margin: 15px auto;
+    padding: 13px 30px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: #ed91b5;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#heartEffects {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.heart-pop {
+    position: absolute;
+    font-size: 28px;
+    animation: heartPop 1s ease forwards;
+}
+
+/* CAT WALK */
+
+@keyframes catWalk {
+
+    0% {
+        left: -200px;
+        transform: scaleX(1) translateY(0);
+    }
+
+    45% {
+        left: calc(100% - 180px);
+        transform: scaleX(1) translateY(-10px);
+    }
+
+    50% {
+        left: calc(100% - 180px);
+        transform: scaleX(-1) translateY(0);
+    }
+
+    95% {
+        left: -20px;
+        transform: scaleX(-1) translateY(-10px);
+    }
+
+    100% {
+        left: -200px;
+        transform: scaleX(1) translateY(0);
+    }
+
+}
+
+@keyframes catHappy {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15) rotate(5deg);
+    }
+
+}
+
+@keyframes heartPop {
+
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(0.5);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-100px) scale(1.3);
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .game-cat {
+        width: 160px;
+        height: 160px;
+    }
+
+}  
+
+/* ============================= */
+/* CAT HAPPY REACTION */
+/* ============================= */
+
+.game-cat.happy {
+    animation: catHappy 0.6s ease-in-out;
+}
+
+@keyframes catHappy {
+
+    0% {
+        transform: scaleX(1) scale(1);
+    }
+
+    25% {
+        transform: scaleX(1) scale(1.12) rotate(-5deg);
+    }
+
+    50% {
+        transform: scaleX(1) scale(1.12) rotate(5deg);
+    }
+
+    75% {
+        transform: scaleX(1) scale(1.08) rotate(-3deg);
+    }
+
+    100% {
+        transform: scaleX(1) scale(1) rotate(0deg);
+    }
+
+} 
+/* CUTE HEART REACTION */
+
+#heartEffects {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.floating-heart {
+    position: absolute;
+
+    font-size: 25px;
+
+    animation: heartPop 1.5s ease-out forwards;
+}
+
+@keyframes heartPop {
+
+    0% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.5);
+    }
+
+    30% {
+        opacity: 1;
+        transform: translateY(-10px) scale(1.2);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-100px) scale(0.8);
+    }
+
+} 
+
+/* ================================= */
+/* FINAL LETTER PAGE */
+/* ================================= */
+
+#letterPage {
+    background: linear-gradient(
+        135deg,
+        #fff0f6,
+        #f8dce9,
+        #ffeaf3
+    );
+
+    min-height: 100vh;
+    padding: 25px 15px;
+    text-align: center;
+    overflow: hidden;
+}
+
+#letterPage .page-content {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+}
+
+.letter-content {
+    animation: letterFadeIn 1s ease;
+}
+
+.letter-sparkles {
+    font-size: 25px;
+    margin: 20px 0;
+    animation: sparkleFloat 2s infinite ease-in-out;
+}
+
+#letterPage h1 {
+    color: #c75b88;
+    font-size: 26px;
+    margin: 20px 0;
+}
+
+#letterPage p {
+    color: #8e526d;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Envelope */
+
+.envelope {
+    font-size: 100px;
+    margin: 35px 0;
+    cursor: pointer;
+    animation: envelopeFloat 2s infinite ease-in-out;
+}
+
+/* Letter Paper */
+
+.letter-paper {
+    background: rgba(255, 255, 255, 0.85);
+    border: 2px solid #f4b6cf;
+    border-radius: 25px;
+    padding: 25px 20px;
+    box-shadow: 0 10px 30px rgba(190, 100, 140, 0.2);
+}
+
+.letter-decoration {
+    font-size: 24px;
+    margin: 15px 0;
+}
+
+.typed-letter {
+    color: #704258;
+    font-size: 17px;
+    line-height: 2;
+    text-align: left;
+    white-space: pre-wrap;
+    min-height: 120px;
+}
+
+#finalMessage {
+    color: #c75b88;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+.letter-signature {
+    color: #c75b88;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+/* Buttons */
+
+#letterPage .game-button,
+#openLetterBtn,
+#replayButton {
+    background: linear-gradient(
+        135deg,
+        #f3a6c4,
+        #df82aa
+    );
+
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 14px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(210, 110, 150, 0.25);
+    transition: 0.3s ease;
+}
+
+#letterPage .game-button:hover,
+#openLetterBtn:hover,
+#replayButton:hover {
+    transform: scale(1.05);
+}
+
+/* Animations */
+
+@keyframes letterFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes envelopeFloat {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+@keyframes sparkleFloat {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 480px) {
+
+    #letterPage h1 {
+        font-size: 22px;
+    }
+
+    .letter-paper {
+        padding: 20px 15px;
+    }
+
+    .typed-letter {
+        font-size: 15px;
+    }
+
+    .envelope {
+        font-size: 80px;
+    }
+
+} 
+
+
+/* ================================= */
+/* FLOWER PAGE - BEAUTIFUL UPDATE */
+/* ================================= */
+
+#flowerPage .page-content {
+    position: relative;
+
+    padding: 34px 22px 28px;
+
+    background:
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(255, 255, 255, 0.85),
+            transparent 30%
+        ),
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.88),
+            rgba(255, 244, 249, 0.82)
+        );
+
+    border: 1px solid rgba(255, 190, 214, 0.55);
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 15px 40px rgba(215, 126, 159, 0.13),
+        0 0 30px rgba(255, 255, 255, 0.65),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+
+    overflow: hidden;
+
+    animation: flowerCardSoftAppear 0.8s ease both;
+}
+
+
+/* Decorative inner border */
+
+#flowerPage .page-content::before {
+    content: "";
+
+    position: absolute;
+    inset: 9px;
+
+    border: 1px solid rgba(222, 143, 177, 0.17);
+
+    border-radius: 23px;
+
+    pointer-events: none;
+}
+
+
+/* Soft decorative flowers */
+
+#flowerPage .page-content::after {
+    content: "🌸     ✦     🌷";
+
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+
+    color: #d88aaa;
+
+    font-size: 19px;
+    letter-spacing: 4px;
+
+    opacity: 0.8;
+
+    pointer-events: none;
+}
+
+
+/* Heading */
+
+#flowerPage h1 {
+    position: relative;
+    z-index: 2;
+
+    margin-top: 18px;
+    margin-bottom: 16px;
+
+    color: #b95e87;
+
+    font-size: clamp(29px, 7vw, 42px);
+    font-weight: 700;
+    line-height: 1.35;
+
+    text-shadow:
+        0 3px 10px rgba(185, 94, 135, 0.09);
+}
+
+
+/* Description */
+
+#flowerPage .page-content > p {
+    position: relative;
+    z-index: 2;
+
+    margin: 0 auto;
+
+    max-width: 290px;
+
+    color: #795969;
+
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* Flower area */
+
+#flowerPage #flowerContainer {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 145px;
+
+    margin: 18px auto 15px;
+    padding: 12px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255, 226, 239, 0.6),
+            transparent 70%
+        );
+
+    border-radius: 22px;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+
+/* Flower area decoration */
+
+#flowerPage #flowerContainer::before {
+    content: "✦";
+
+    position: absolute;
+    top: 5px;
+    left: 19%;
+
+    color: #d68bab;
+    font-size: 20px;
+
+    animation: flowerSparkle 2.8s ease-in-out infinite;
+}
+
+#flowerPage #flowerContainer::after {
+    content: "✧";
+
+    position: absolute;
+    right: 19%;
+    bottom: 5px;
+
+    color: #d68bab;
+    font-size: 21px;
+
+    animation: flowerSparkle 3s ease-in-out infinite reverse;
+}
+
+
+/* Next button */
+
+#flowerPage .next-button {
+    position: relative;
+    z-index: 3;
+
+    width: 100%;
+    min-height: 56px;
+
+    margin-top: 12px;
+    padding: 14px 20px;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e79bbb,
+            #d980a7
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 18px rgba(207, 117, 158, 0.22),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+#flowerPage .next-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 25px rgba(207, 117, 158, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+#flowerPage .next-button:active {
+    transform: scale(0.97);
+}
+
+
+/* Small bottom decoration */
+
+#flowerPage .page-content {
+    --flower-bottom-decoration: "♡  ✦  ♡";
+}
+
+#flowerPage .next-button::after {
+    content: "♡  ✦  ♡";
+
+    display: block;
+
+    margin-top: 8px;
+
+    color: rgba(255, 255, 255, 0.75);
+
+    font-size: 10px;
+    letter-spacing: 5px;
+}
+
+
+/* Animation */
+
+@keyframes flowerCardSoftAppear {
+    from {
+        opacity: 0;
+        transform: translateY(18px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes flowerSparkle {
+    0%,
+    100% {
+        opacity: 0.3;
+        transform: scale(0.8) rotate(0deg);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.25) rotate(20deg);
+    }
+}
+
+
+/* Mobile adjustment */
+
+@media (max-width: 480px) {
+
+    #flowerPage .page-content {
+        padding: 32px 18px 25px;
+
+        border-radius: 28px;
+    }
+
+    #flowerPage h1 {
+        font-size: 30px;
+        line-height: 1.4;
+    }
+
+    #flowerPage .page-content > p {
+        font-size: 13px;
+    }
+
+    #flowerPage #flowerContainer {
+        min-height: 135px;
+        margin-top: 15px;
+    }
+
+    #flowerPage .next-button {
+        min-height: 54px;
+        font-size: 14px;
+    }
+}
